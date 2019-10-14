@@ -82,6 +82,7 @@
 命名关键字参数：命名关键字参数需要一个特殊分隔符*，*后面的参数被视为命名关键字参数，限制关键字参数
 关键字参数：允许传入0个或多个包含参数名的参数，在函数内部自动组成一个dict。**kw
 """
+from os.path import join
 
 """
 汉诺塔
@@ -335,3 +336,39 @@ chr()函数将ASCII码转化为字符串
 # print(count)
 
 
+# def foo(matrix):
+#     if len(matrix) == 0 or len(matrix[0]) == 0:
+#         return []
+#     ans = []
+#     left, up, down, right = 0, 0, len(matrix) - 1, len(matrix[0]) - 1
+#     while left <= right and up <= down:
+#         for i in range(left, right + 1):
+#             ans += matrix[up][i],
+#         up += 1
+#         for i in range(up, down + 1):
+#             ans += matrix[i][right],
+#         right -= 1
+#         for i in reversed(range(left, right + 1)):
+#             ans += matrix[down][i],
+#         down -= 1
+#         for i in reversed(range(up, down + 1)):
+#             ans += matrix[i][left],
+#         left += 1
+#     nums = ans[:(len(matrix) * len(matrix[0]))]
+#     for i in nums[:-2]:
+#         print(i, end=',')
+#     return nums[-1]
+#
+#
+# m, n = map(int, input().split())
+# data = []
+# count = 0
+# while count < m:
+#     s = input()
+#     if s != '':
+#         temp = [int(i) for i in s.split()]
+#         data.append(temp)
+#         count += 1
+#     else:
+#         break
+# print(foo(data))
